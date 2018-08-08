@@ -333,6 +333,31 @@ img, video, iframe {
     background-color: #e97688;
 }
 
+.ui-button-text-icon-primary {
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px 0px 10px 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.ui-button-text-only {
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px 0px 10px 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.ui-button-text-only .ui-button-text {
+    padding: 0.6em 1em;
+}
+ui-button-text-only:hover, .ui-button-text:hover {
+    box-shadow: 0 0 5px #fff, 0 0 8px rgba(255, 255, 255, .6);
+}
+
 /*** Media Queries ***/
 /* 980px or more */
 @media (min-width: 980px) {
