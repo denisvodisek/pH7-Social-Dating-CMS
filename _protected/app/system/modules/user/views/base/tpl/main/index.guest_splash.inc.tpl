@@ -14,7 +14,10 @@
     {else}
         <style scoped="scoped">
             body {
-                background: white url('{url_tpl}file/splash/{i}_pic.jpg') no-repeat;
+                background: white url('{url_tpl}file/splash/{i}_pic.jpg') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
                 background-size: cover;
                 top: 50%;
                 left: 50%;
