@@ -14,7 +14,7 @@
     {else}
         <style scoped="scoped">
             body {
-                background: url('{url_tpl}file/splash/couple.jpg') repeat-y;
+                background: white url('{url_tpl}file/splash/{i}_pic.jpg') no-repeat;
                 background-size: cover;
                 top: 50%;
                 left: 50%;
