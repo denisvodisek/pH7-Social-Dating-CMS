@@ -209,7 +209,7 @@ video#bgvid {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1099px) {
     .left, .right, .login_block {
         text-align: center;
         margin-left: auto;
