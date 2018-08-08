@@ -14,7 +14,7 @@
     {else}
         <style scoped="scoped">
             body {
-                background: url('{url_tpl}file/splash/{i}_vid.jpg') repeat-y;
+                background: url('{url_tpl}file/splash/couple.jpg') repeat-y;
                 background-size: cover;
                 top: 50%;
                 left: 50%;
@@ -46,8 +46,10 @@
             {{ JoinForm::step1() }}
         </div>
         {if $is_mobile}
+        <div class="left col-md-6 animated fadeInLeft col-md-offset-1">
             <div class="s_tMarg"></div>
             {manual_include 'user_promo_block.inc.tpl'}
+        </div>
         {/if}
     </div>
 </div>
