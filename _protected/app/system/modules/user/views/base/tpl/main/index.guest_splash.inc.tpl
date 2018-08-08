@@ -31,9 +31,22 @@
         <div class="left col-md-6 animated fadeInLeft col-md-offset-1">
             {manual_include 'user_promo_block.inc.tpl'}
         </div>
-    {/if}
+        <div class="left col-md-4 animated fadeInRight">
+            <h1>{headline}</h1>
 
-    <div class="left col-md-4 animated fadeInRight">
+            {* For small devices, the following will be activated through /templates/themes/base/css/splash.css *}
+            <div class="login_button hidden center">
+                <a href="{{ $design->url('user','main','login') }}" class="btn btn-primary ui-button-text-only ui-button-white">
+                    <strong>{lang 'Login'}</strong>
+                </a>
+            </div>
+            <div class="login_form">
+                {{ JoinForm::step1() }}
+            </div>
+        </div>
+    {/if}
+    {if $is_mobile}
+    <div class="left col-md-6 animated fadeInRight">
         <h1>{headline}</h1>
 
         {* For small devices, the following will be activated through /templates/themes/base/css/splash.css *}
@@ -46,7 +59,6 @@
             {{ JoinForm::step1() }}
         </div>
     </div>
-        {if $is_mobile}
         <div class="left col-md-6 animated fadeInLeft col-md-offset-1">
             <div class="s_tMarg"></div>
             {manual_include 'user_promo_block.inc.tpl'}
