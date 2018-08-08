@@ -328,6 +328,11 @@ img, video, iframe {
 .ad_120_600 {}
 .ad_160_600 {}
 
+
+.progress-bar {
+    background-color: #e97688;
+}
+
 /*** Media Queries ***/
 /* 980px or more */
 @media (min-width: 980px) {

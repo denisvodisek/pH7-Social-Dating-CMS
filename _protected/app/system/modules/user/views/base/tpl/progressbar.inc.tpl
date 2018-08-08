@@ -1,6 +1,6 @@
 <div class="progress">
     <div
-        class="progress-bar progress-bar-striped active"
+        class="progress-bar active"
         role="progressbar"
         aria-valuenow="{progressbar_percentage}"
         aria-valuemin="0"
