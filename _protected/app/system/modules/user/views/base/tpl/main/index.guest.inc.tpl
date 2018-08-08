@@ -1,7 +1,7 @@
 <div class="right col-md-4 animated fadeInRight">
     <h1 class="red3 italic underline">{headline}</h1>
     <div class="center">
-        <a href="{{ $design->url('user','main','login') }}" class="btn btn-primary btn-lg">
+        <a href="{{ $design->url('user','main','login') }}" class="btn btn-primary ui-button-text-only ui-button-white">
             <strong>{lang 'Login'}</strong>
         </a>
     </div>

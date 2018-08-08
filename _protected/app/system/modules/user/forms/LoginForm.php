@@ -37,7 +37,7 @@ class LoginForm
             $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error ccaptcha"></span>'));
         }
 
-        $oForm->addElement(new \PFBC\Element\Button(t('Login'), 'submit'));
+        $oForm->addElement(new \PFBC\Element\Button(t('Login'), 'submit', ['class' => 'ui-button-white']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }

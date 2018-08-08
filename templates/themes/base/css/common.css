@@ -335,18 +335,18 @@ img, video, iframe {
 
 .ui-button-text-icon-primary {
     font-weight: bold;
-    color: white;
+    color: #666;
+    border: 2px solid #666;
     background: transparent;
-    border: 2px solid white;
     border-radius: 0px 0px 10px 0px;
     margin-top:0px;
     margin-bottom:0px;
 }
 .ui-button-text-only {
     font-weight: bold;
-    color: white;
+    color: #666;
+    border: 2px solid #666;
     background: transparent;
-    border: 2px solid white;
     border-radius: 0px 0px 10px 0px;
     margin-top:0px;
     margin-bottom:0px;
@@ -356,6 +356,11 @@ img, video, iframe {
 }
 ui-button-text-only:hover, .ui-button-text:hover {
     box-shadow: 0 0 5px #fff, 0 0 8px rgba(255, 255, 255, .6);
+}
+
+.ui-button-white {
+    color: white;
+    border: 2px solid white;
 }
 
 /*** Media Queries ***/

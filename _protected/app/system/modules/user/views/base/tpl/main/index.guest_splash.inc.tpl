@@ -38,7 +38,7 @@
 
         {* For small devices, the following will be activated through /templates/themes/base/css/splash.css *}
         <div class="login_button hidden center">
-            <a href="{{ $design->url('user','main','login') }}" class="btn btn-primary ui-button-text-only">
+            <a href="{{ $design->url('user','main','login') }}" class="btn btn-primary ui-button-text-only ui-button-white">
                 <strong>{lang 'Login'}</strong>
             </a>
         </div>
