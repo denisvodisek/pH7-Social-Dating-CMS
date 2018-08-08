@@ -366,6 +366,14 @@ ui-button-text-only:hover, .ui-button-text:hover {
 #form_join_user4 .pfbc-buttons{
     text-align: center!important;
 }
+
+.profile_ul {
+    padding: 10px;
+}
+.profile_ul li {
+    margin-top: 10px;
+    padding: 2px;
+}
 input#form_join_user4-element-2 {
     margin: 0 auto;
 }

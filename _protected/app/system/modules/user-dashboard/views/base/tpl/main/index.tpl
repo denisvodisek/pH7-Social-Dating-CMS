@@ -5,7 +5,7 @@
             <h2>{lang 'My Profile'}</h2>
             {{ $avatarDesign->lightBox($username, $first_name, $sex, 400) }}
 
-            <ul>
+            <ul class="profile_ul">
                 <li>
                     <a href="{{ $design->url('user','setting','avatar') }}" title="{lang 'Change My Profile Photo'}"><i class="fa fa-upload"></i> {lang 'Change Profile Photo'}</a>
                 </li>
