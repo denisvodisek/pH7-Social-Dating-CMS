@@ -206,6 +206,27 @@ video#bgvid {
         height: 200px;
         width: 393px;
     }
+
+}
+
+@media (max-width: 1024px) {
+    .left, .right, .login_block {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .profiles_window {
+        max-width: 100% !important;
+    }
+    .center {
+        /* Reset width for small screens */
+        width: auto;
+    }
+
+    #promo_text {
+        max-width: 100%;
+    }
 }
 
 /* 925px or less */
