@@ -363,6 +363,13 @@ ui-button-text-only:hover, .ui-button-text:hover {
     border: 2px solid white;
 }
 
+#form_join_user4 .pfbc-buttons{
+    text-align: center!important;
+}
+#form_join_user4 .pfbc-label input {
+    margin: 0 auto;
+}
+
 /*** Media Queries ***/
 /* 980px or more */
 @media (min-width: 980px) {

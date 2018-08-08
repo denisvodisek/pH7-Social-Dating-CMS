@@ -161,7 +161,7 @@ class JoinForm
         }
 
         $oForm = new \PFBC\Form('form_join_user4');
-        $oForm->configure(['action' => '']);
+        $oForm->configure(['action' => '', 'class'=>'positioncenter']);
         $oForm->addElement(new \PFBC\Element\Hidden('submit_join_user4', 'form_join_user4'));
         $oForm->addElement(new \PFBC\Element\Token('join4'));
         $oForm->addElement(new \PFBC\Element\File(t('Your Profile Photo'), 'avatar', $aAvatarFieldOption));

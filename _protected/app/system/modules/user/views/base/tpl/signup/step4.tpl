@@ -1,4 +1,4 @@
-<div class="left col-md-4">
+<div class="col-md-12 text-center">
     {{ $avatarDesign->lightBox() }}
     {{ JoinForm::step4() }}
 </div>
