@@ -61,7 +61,7 @@ body {
 /* Allowing logo name starting by a lowercase like "pH7" */
 header {
     padding: 10px 0 10px;
-    background: url(../img/header2.png) repeat-x top;
+    //background: url(../img/header2.png) repeat-x top;
 }
 
 header, #content {
