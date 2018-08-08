@@ -14,7 +14,7 @@
     {else}
         <style scoped="scoped">
             body {
-                background: url('http://sharethemoments.net/templates/themes/datelove/file/splash/couple.jpg') repeat-y;
+                background: url('{url_tpl}file/splash/couple.jpg') repeat-y;
                 background-size: cover;
                 top: 50%;
                 left: 50%;
