@@ -14,7 +14,7 @@
     {else}
         <style scoped="scoped">
             body {
-                background: url('{url_tpl}file/splash/couple.jpg') repeat-y;
+                background: url('http://sharethemoments.net/templates/themes/datelove/file/splash/couple.jpg') repeat-y;
                 background-size: cover;
                 top: 50%;
                 left: 50%;
@@ -47,10 +47,6 @@
     {/if}
     {if $is_mobile}
         <div class="left col-md-6 animated fadeInLeft">
-            <div class="s_tMarg"></div>
-            {manual_include 'user_promo_block.inc.tpl'}
-        </div>
-        <div class="left col-md-6 animated fadeInRight">
             <h1>{headline}</h1>
 
             {* For small devices, the following will be activated through /templates/themes/base/css/splash.css *}
@@ -63,6 +59,11 @@
                 {{ JoinForm::step1() }}
             </div>
         </div>
+        <div class="left col-md-6 animated fadeInRight">
+            <div class="s_tMarg"></div>
+            {manual_include 'user_promo_block.inc.tpl'}
+        </div>
+
         {/if}
 
 </div>
