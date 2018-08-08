@@ -9,10 +9,15 @@
 }
 
 body, td, pre {
-    font-family: 'Open Sans', Verdana, Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 13px;
     color: #666;
 }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
 
 body {
     background: white url(../img/body_bg.jpg) repeat-x;
