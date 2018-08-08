@@ -1,4 +1,4 @@
-<h1>{slogan}</h1>
+<h1 style="color: white">{slogan}</h1>
 {if $is_users_block}
     <div class="center profiles_window thumb pic_block">
         {{ $userDesignModel->profiles(0, $number_profiles) }}
