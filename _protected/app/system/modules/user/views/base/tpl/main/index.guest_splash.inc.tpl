@@ -45,11 +45,12 @@
         <div class="login_form">
             {{ JoinForm::step1() }}
         </div>
+    </div>
         {if $is_mobile}
         <div class="left col-md-6 animated fadeInLeft col-md-offset-1">
             <div class="s_tMarg"></div>
             {manual_include 'user_promo_block.inc.tpl'}
         </div>
         {/if}
-    </div>
+
 </div>
