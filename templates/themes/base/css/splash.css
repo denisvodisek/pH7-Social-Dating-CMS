@@ -214,11 +214,15 @@ video#bgvid {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        width: 80%;
+        width: 100%;
     }
 
     .center {
         /* Reset width for small screens */
         width: auto;
+    }
+
+    #promo_text {
+        max-width: 100%;
     }
 }
