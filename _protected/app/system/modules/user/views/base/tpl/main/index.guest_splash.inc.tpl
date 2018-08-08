@@ -50,7 +50,7 @@
     {/if}
     {if $is_mobile}
         <div class="left col-md-6 animated fadeInLeft">
-            <h1>{headline}</h1>
+            <h1 style="color: white">{headline}</h1>
 
             {* For small devices, the following will be activated through /templates/themes/base/css/splash.css *}
             <div class="login_button hidden center">
