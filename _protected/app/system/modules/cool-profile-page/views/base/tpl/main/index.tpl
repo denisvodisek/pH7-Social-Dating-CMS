@@ -20,11 +20,9 @@
         <p>
             <i class="fa fa-{sex}"></i>
             <span class="bold">{lang 'I am a:'}</span>
-            <span class="italic">
                 <a href="{{ $design->url('user','browse','index', '?country='.$country_code.'&match_sex='.$sex) }}">
                     {lang $sex}
                 </a>
-            </span>
         </p>
 
         <div class="break"></div>
@@ -152,6 +150,7 @@
                 <h2 class="center">{lang 'A Little About Me'}</h2>
                 <div class="quote italic center">{description}</div>
             </div>
+            <br>
         {/if}
 
         <h2 class="center">{lang 'Photos & Videos'}</h2>
