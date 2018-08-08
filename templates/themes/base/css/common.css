@@ -362,7 +362,10 @@ ui-button-text-only:hover, .ui-button-text:hover {
     color: white;
     border: 2px solid white;
 }
-
+.buttoncolor button {
+    color: #666!important;
+    border: 2px solid #666!important;
+}
 #form_join_user4 .pfbc-buttons{
     text-align: center!important;
 }
