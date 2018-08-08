@@ -36,8 +36,7 @@
     {{ $design->staticFiles('css', PH7_STATIC . PH7_CSS . 'js/jquery/box/', 'box.css') }} {* We have to include box CSS alone because it includes images in its folder *}
     {{ $design->staticFiles('css', PH7_STATIC . PH7_CSS, 'bootstrap.css,bootstrap_customize.css,animate.css') }}
     {{ $design->staticFiles('css', PH7_LAYOUT . PH7_TPL . PH7_TPL_NAME . PH7_SH . PH7_CSS, 'common.css,style.css,layout.css,menu.css,like.css,color.css,form.css,js/jquery/rating.css,js/jquery/apprise.css,js/jquery/tipTip.css') }}
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
-
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Raleway" />
     {* Custom CSS code *}
     {{ $design->externalCssFile(PH7_RELATIVE.'asset/css/color.css') }}
     {{ $design->externalCssFile(PH7_RELATIVE.'asset/css/style.css') }}
