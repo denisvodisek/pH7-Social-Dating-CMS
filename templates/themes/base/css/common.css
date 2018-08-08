@@ -377,6 +377,9 @@ ui-button-text-only:hover, .ui-button-text:hover {
 input#form_join_user4-element-2 {
     margin: 0 auto;
 }
+.slick-prev, .slick-next {
+    background-color: #dddddd!important;
+}
 
 /*** Media Queries ***/
 /* 980px or more */

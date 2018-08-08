@@ -42,7 +42,7 @@
             </script>
         </div>
         <div class="clear"></div>
-
+<br>
         <h2 class="center underline">{lang 'Visitors who visited my profile'}</h2>
         <div class="content" id="visitor">
             <script>
@@ -51,7 +51,7 @@
             </script>
         </div>
         <div class="clear"></div>
-
+        <br>
         {if $is_picture_enabled}
             <h2 class="center underline">{lang 'My photo albums'}</h2>
             <div class="content" id="picture">
@@ -61,6 +61,7 @@
                 </script>
             </div>
             <div class="clear"></div>
+            <br>
         {/if}
 
         {if $is_video_enabled}
@@ -72,6 +73,7 @@
                 </script>
             </div>
             <div class="clear"></div>
+            <br>
         {/if}
 
         {if $is_forum_enabled}
@@ -83,6 +85,7 @@
                 </script>
             </div>
             <div class="clear"></div>
+            <br>
         {/if}
 
         {if $is_note_enabled}
@@ -94,6 +97,7 @@
                 </script>
             </div>
             <div class="clear"></div>
+            <br>
         {/if}
 
         <h2 class="center underline italic s_tMarg">{lang 'Quick User Search'}</h2>
