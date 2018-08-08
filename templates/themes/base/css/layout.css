@@ -10,7 +10,6 @@
     margin-right: 20px;
     margin-bottom: 15px;
     padding: 5px;
-    border-radius: 5px;
     background-image: url(../img/bg_box.png);
 }
 
@@ -98,7 +97,6 @@
 }
 
 .dropdown_menu li > a:hover {
-    border-radius: 4px;
     background-color: #EEE;
 }
 
@@ -191,7 +189,6 @@
     margin-bottom: 1px;
     padding: 3px;
     text-align: center;
-    border-radius: 3px;
 }
 
 .warning_block p {
