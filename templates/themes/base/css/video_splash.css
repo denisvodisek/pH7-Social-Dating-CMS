@@ -14,11 +14,14 @@ body {
 }
 
 #promo_text h2, #promo_text h2 a {
-    color: #F55959 !important;
+    color: #ffffff !important;
 }
 
 #promo_text {
-    max-width: 500px;
+    max-width:80%;
+    background: #00000066;
+    padding: 20px;
+    margin-top: 2.8em;
 }
 
 footer a, footer p {
@@ -51,4 +54,26 @@ footer a, footer p {
 .alert {
     z-index: 999;
     position: absolute;
+}
+
+.ui-button-text-icon-primary {
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px 0px 10px 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.ui-button-text-only {
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0px 0px 10px 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.ui-button-text-only .ui-button-text {
+    padding: 0.6em 1em;
 }
