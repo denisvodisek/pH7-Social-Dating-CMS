@@ -1,4 +1,4 @@
-<div class="left col-md-8">
+<div class="left col-md-8 col-md-offset-2">
     {{ ContactForm::display() }}
     <p class="italic red">{lang 'Your IP is: %0%', $ip}</p>
 </div>

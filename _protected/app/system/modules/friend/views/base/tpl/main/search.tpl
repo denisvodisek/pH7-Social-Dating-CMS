@@ -1,4 +1,4 @@
-<div class="left col-md-8">
+<div class="left col-md-8 col-md-offset-2">
     {{ SearchFriendForm::display() }}
 </div>
 

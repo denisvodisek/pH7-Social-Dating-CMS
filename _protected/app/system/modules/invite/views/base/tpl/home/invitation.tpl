@@ -1,4 +1,4 @@
-<div class="left col-md-8">
+<div class="left col-md-8 col-md-offset-2">
     <div id="block_page">
         <h1>{lang 'Invite your Friends'}</h1>
         {{ InviteForm::display() }}

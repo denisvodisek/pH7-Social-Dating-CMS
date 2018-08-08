@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="left col-md-8">
+<div class="left col-md-8 col-md-offset-2">
     <div class="folio_block">
         <h1 class="red3 italic underline">{slogan}</h1>
 

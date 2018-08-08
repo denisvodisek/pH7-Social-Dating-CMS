@@ -1,4 +1,4 @@
-<div class="left col-md-8">
+<div class="left col-md-8 col-md-offset-2">
     <p>
         {lang}Simply enter your registered email address in the field below, and click the "Send Activation" button.{/lang}<br />
         {lang}It must be the same email address you gave us when you became a member.{/lang}
