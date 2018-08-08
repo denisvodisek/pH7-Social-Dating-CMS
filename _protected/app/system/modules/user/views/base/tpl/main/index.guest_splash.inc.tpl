@@ -59,7 +59,7 @@
             {{ JoinForm::step1() }}
         </div>
     </div>
-        <div class="left col-md-6 animated fadeInLeft col-md-offset-1">
+        <div class="left col-md-6 animated fadeInLeft">
             <div class="s_tMarg"></div>
             {manual_include 'user_promo_block.inc.tpl'}
         </div>
