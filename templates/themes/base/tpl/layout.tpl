@@ -178,6 +178,7 @@
           {lang 'WARNING: Your site is in development mode! You can change the mode'} <a href="{{ $design->url(PH7_ADMIN_MOD,'tool','envmode') }}" title="{lang 'Change the Environment Mode'}" class="dark-red">{lang 'here'}</a>
         </p>
       {/if}
+      <br>
       <div class="right vs_marg">
         <!-- Required for free version of MaxMind GeoDB. Ref: https://dev.maxmind.com/geoip/geoip2/geolite2/#License -->
         <small class="small">This product includes GeoLite2 data created by MaxMind, available from <a href="http://www.maxmind.com" rel="nofollow" class="gray">http://www.maxmind.com</a></small>
