@@ -6,7 +6,7 @@
 
 .input_error {
     float: left;
-    margin-left: 2em;
+    margin-left: 0px;
     font-size: .95em;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Myriad Pro", Tahoma, Arial, Verdana, sans-serif;
 }
