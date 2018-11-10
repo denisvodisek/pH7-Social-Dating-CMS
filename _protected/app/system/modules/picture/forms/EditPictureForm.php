@@ -38,7 +38,8 @@ class EditPictureForm
 
         $oForm->addElement(new \PFBC\Element\Textbox(t('Image Name:'), 'title', ['value' => $oPhoto->title, 'required' => 1, 'pattern' => $sTitlePattern, 'validation' => new \PFBC\Validation\RegExp($sTitlePattern)]));
         $oForm->addElement(new \PFBC\Element\Textarea(t('Image Description:'), 'description', ['value' => $oPhoto->description, 'validation' => new \PFBC\Validation\Str(2, 200)]));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-edit"></i> Edit'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 }

@@ -14,6 +14,7 @@ class MainController extends Controller
 {
     public function index()
     {
+
         $this->view->page_title = $this->view->h1_title = t('My Dashboard');
 
         $this->design->addCss(
@@ -29,13 +30,14 @@ class MainController extends Controller
             // Add the JavaScript file for the Ajax Friend block
             $this->design->addJs(PH7_LAYOUT . PH7_SYS . PH7_MOD . 'friend' . PH7_SH . PH7_TPL . PH7_TPL_MOD_NAME . PH7_SH . PH7_JS, 'friend.js');
         }
-
         $this->view->username = $this->session->get('member_username');
+        //$this->view->background = $this->getWallpaper();
         $this->view->first_name = $this->session->get('member_first_name');
+        $this->view->last_name = $this->httpRequest->get('last_name');
+        $this->view->description = $this->session->get('member_description');
         $this->view->sex = $this->session->get('member_sex');
         $this->view->avatarDesign = new AvatarDesignCore; // For the avatar lightBox
         $this->view->userDesignModel = new UserDesignModel; // For the profilesBlock
-
         $this->output();
     }
 }

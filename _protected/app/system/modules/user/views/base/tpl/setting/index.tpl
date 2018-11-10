@@ -1,3 +1,4 @@
+<div class="container">
 <ol id="toc">
     <li><a href="#edit"><span>{lang 'Edit'}</span></a></li>
     <li><a href="#avatar"><span>{lang 'Profile Photo'}</span></a></li>
@@ -34,3 +35,4 @@
 
 <script src="{url_static}js/tabs.js"></script>
 <script>tabs('p', ['edit','avatar','design','notification','privacy','pwd']);</script>
+</div>

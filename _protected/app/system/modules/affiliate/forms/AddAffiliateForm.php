@@ -42,7 +42,7 @@ class AddAffiliateForm
         $oForm->addElement(new \PFBC\Element\Url(t('Website:'), 'website', ['description' => t('Main website where the affiliate is the owner (e.g. http://ph7cms.com)'), 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\Email(t('Bank Account:'), 'bank_account', ['description' => t('Bank Account (PayPal Email Address).'), 'validation' => new \PFBC\Validation\BankAccount]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'geo/autocompleteCity.js"></script>'));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->render();
     }
 }

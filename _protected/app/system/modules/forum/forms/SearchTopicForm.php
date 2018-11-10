@@ -19,7 +19,8 @@ class SearchTopicForm
         $oForm->addElement(new \PFBC\Element\Search(t('Name, Keyword of message, Author (username) or ID of Topic Forum:'), 'looking'));
         $oForm->addElement(new \PFBC\Element\Select(t('Browse By:'), 'order', [SearchCoreModel::TITLE => t('Title'), SearchCoreModel::VIEWS => t('Popular'), SearchCoreModel::CREATED => t('Created Date'), SearchCoreModel::UPDATED => t('Updated Date')]));
         $oForm->addElement(new \PFBC\Element\Select(t('Direction:'), 'sort', [SearchCoreModel::ASC => t('Ascending'), SearchCoreModel::DESC => t('Descending')]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Search'), 'submit', ['icon' => 'search']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-search"></i> Search'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 }

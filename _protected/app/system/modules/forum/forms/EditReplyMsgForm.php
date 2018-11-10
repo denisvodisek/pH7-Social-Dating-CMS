@@ -40,7 +40,8 @@ class EditReplyMsgForm
         $oForm->addElement(new \PFBC\Element\Hidden('submit_edit_reply_msg', 'form_edit_reply_msg'));
         $oForm->addElement(new \PFBC\Element\Token('edit_reply_msg'));
         $oForm->addElement(new \PFBC\Element\CKEditor(t('Message:'), 'message', ['value' => $oMsg->message, 'required' => 1, 'validation' => new \PFBC\Validation\Str(4)]));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 }

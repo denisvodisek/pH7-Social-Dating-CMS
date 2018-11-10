@@ -21,22 +21,15 @@
     <meta name="distribution" content="{meta_distribution}" />
     {if $header}{header}{/if}
 
-    <!-- Begin Copyright pH7 Dating/Social CMS by Pierre-Henry SORIA, All Rights Reserved -->
-    <!-- Do not modify or remove this code! Think of those who spend a lot of time to develop this CMS & Framework for you -->
-    <meta name="creator" content="pH7CMS, Pierre-Henry Soria - {software_url}" />
-    <meta name="designer" content="pH7CMS, Pierre-Henry Soria - {software_url}" />
-    <meta name="generator" content="{software_name}  {software_version}" />
-    <!-- End Copyright -->
-
-    <!-- End Title and Meta -->
-
     <!-- Begin Sheet CSS -->
     {{ $design->externalCssFile(PH7_URL_STATIC. PH7_CSS . 'js/jquery/smoothness/jquery-ui.css') }}
     {{ $design->externalCssFile(PH7_URL_STATIC. PH7_CSS . 'font-awesome.css') }}
     {{ $design->staticFiles('css', PH7_STATIC . PH7_CSS . 'js/jquery/box/', 'box.css') }} {* We have to include box CSS alone because it includes images in its folder *}
-    {{ $design->staticFiles('css', PH7_STATIC . PH7_CSS, 'bootstrap.css,bootstrap_customize.css,animate.css') }}
-    {{ $design->staticFiles('css', PH7_LAYOUT . PH7_TPL . PH7_TPL_NAME . PH7_SH . PH7_CSS, 'common.css,style.css,layout.css,menu.css,like.css,color.css,form.css,js/jquery/rating.css,js/jquery/apprise.css,js/jquery/tipTip.css') }}
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Raleway" />
+    {{ $design->staticFiles('css', PH7_STATIC . PH7_CSS, 'bootstrap.css') }}
+    {{ $design->staticFiles('css', PH7_LAYOUT . PH7_TPL . PH7_TPL_NAME . PH7_SH . PH7_CSS, 'common.css,style.css,layout.css,menu.css,like.css,color.css,form.css,js/jquery/rating.css,js/jquery/apprise.css,js/jquery/tipTip.css,material-kit.css,custom.css') }}
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito|Material+Icons" />
+
     {* Custom CSS code *}
     {{ $design->externalCssFile(PH7_RELATIVE.'asset/css/color.css') }}
     {{ $design->externalCssFile(PH7_RELATIVE.'asset/css/style.css') }}
@@ -68,10 +61,9 @@
 
     {designModel.analyticsApi()}
   </head>
-  <body>
+  <body class="sidebar-collapse">
 
     <!-- Begin Header -->
-    <header>
       {* If we aren't on the the splash page, then display the menu *}
       {if !$is_guest_homepage}
         {main_include 'top_menu.inc.tpl'}
@@ -84,13 +76,18 @@
       </noscript>
 
       {if $is_guest_homepage}
-          <div class="row">
-              <div role="banner" id="logo" class="col-md-8">
-                  <h1>
-                      <a href="{{ $design->homePageUrl() }}" title="{slogan}">{site_name}</a>
+        <div class="container">
+          <div class="row topheader">
+              <div role="banner" class="col-md-4 pull-left">
+                  <h1 class="title">
+                    <a href="{{ $design->homePageUrl() }}" title="{slogan}"><i class="fa fa-heart heartlogo"></i> {site_name}</a>
                   </h1>
               </div>
+            <div class="col-md-8 forma pull-right">
+            {{ LoginSplashForm::display() }}
+            </div>
           </div>
+        </div>
       {/if}
 
       {* Heading groups *}
@@ -104,7 +101,6 @@
       {/if}
 
       <div class="clear"></div>
-    </header>
     <!-- End Header -->
 
     <!-- Begin Popups -->
@@ -113,8 +109,17 @@
     </div>
     <!-- End Popups -->
 
-    <!-- Begin Content -->
-    <div role="main" class="container" id="content">
+    <div id="ajph">
+      <div id="sub_ajph">
+        {if !empty($manual_include)}
+          {manual_include $manual_include}
+        {elseif !empty($pOH_not_found)}
+          {main_include 'error.inc.tpl'}
+        {else}
+          {auto_include}
+        {/if}
+      </div>
+    <div role="main" id="content">
       {* Alert Message *}
       {{ $design->flashMsg() }}
       <div class="msg"></div>
@@ -124,16 +129,7 @@
       {{ $lang_file =  Framework\Translate\Lang::getJsFile(PH7_PATH_STATIC . PH7_JS . PH7_LANG) }}
       {{ $design->staticFiles('js', PH7_STATIC . PH7_JS, PH7_LANG . $lang_file) }}
 
-      <div id="ajph">
-        <div id="sub_ajph">
-          {if !empty($manual_include)}
-            {manual_include $manual_include}
-          {elseif !empty($pOH_not_found)}
-            {main_include 'error.inc.tpl'}
-          {else}
-            {auto_include}
-          {/if}
-        </div>
+
       </div>
     </div>
     <div role="banner" class="center ad_468_60">
@@ -142,7 +138,8 @@
     <!-- End Content -->
     <div class="push"></div>
     <!-- Begin Footer -->
-    <footer>
+    <footer class="footer footer-default">
+      <div class="container">
       <div role="banner" class="center ad_728_90">
           {designModel.ad(728, 90)}
       </div>
@@ -159,40 +156,52 @@
         </div>
       {/if}
 
-      <div role="contentinfo">
-        <div class="ft_copy">
-          <p>
-            &copy; <ph:date value="Y" /> <strong>{site_name}</strong>  {{ $design->link() }}
-          </p>
-          {{ $design->littleLikeApi() }}
-        </div>
-        {{ $design->langList() }}
-        {main_include 'bottom_menu.inc.tpl'}
-      </div>
 
-      {if isDebug()}
-        <div class="ft">
-          <p><small>{{ $design->stat() }}</small></p>
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Home Page
+                </a>
+              </li>
+              <li>
+                <a href="https://creative-tim.com/presentation">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Join us!
+                </a>
+              </li>
+              <li>
+                <a href="https://www.creative-tim.com/license">
+                  Terms & Conditions
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a href="https://sharethemoments.net" target="_blank"><i class="fa fa-heart heartlogo"></i>ShareTheMoments</a>.
+          </div>
         </div>
-        <p class="small dark-red">
-          {lang 'WARNING: Your site is in development mode! You can change the mode'} <a href="{{ $design->url(PH7_ADMIN_MOD,'tool','envmode') }}" title="{lang 'Change the Environment Mode'}" class="dark-red">{lang 'here'}</a>
-        </p>
-      {/if}
-      <br>
-      <div class="right vs_marg">
-        <!-- Required for free version of MaxMind GeoDB. Ref: https://dev.maxmind.com/geoip/geoip2/geolite2/#License -->
-        <small class="small">This product includes GeoLite2 data created by MaxMind, available from <a href="http://www.maxmind.com" rel="nofollow" class="gray">http://www.maxmind.com</a></small>
-      </div>
-    </footer>
+      </footer>
 
     <div class="clear"></div>
 
     <!-- End Footer -->
-
     <!-- Begin Footer JavaScript -->
-    {{ $design->staticFiles('js', PH7_STATIC . PH7_JS, 'jquery/box.js,jquery/tipTip.js,bootstrap.js,common.js,str.js,holder.js') }}
+    {{ $design->staticFiles('js', PH7_LAYOUT . PH7_TPL . PH7_TPL_NAME . PH7_SH . PH7_CSS, 'js/core/jquery.min.js,js/core/popper.min.js,js/core/bootstrap-material-design.min.js,js/material-kit.js') }}
+
+    {{ $design->staticFiles('js', PH7_STATIC . PH7_JS, 'jquery/box.js,jquery/tipTip.js,common.js,str.js,holder.js') }}
+
     {{ $design->staticFiles('js', PH7_LAYOUT . PH7_TPL . PH7_TPL_NAME . PH7_SH . PH7_JS, 'global.js') }}
-    {{ $design->externalJsFile(PH7_URL_STATIC . PH7_JS . 'jquery/jquery-ui.js') }} {* UI must be the last here, otherwise the jQueryUI buttons won't work *}
+
+
 
     {* SetUserActivity and User Chat *}
     {if $is_user_auth}

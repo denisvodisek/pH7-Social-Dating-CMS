@@ -56,7 +56,7 @@ class SearchUserCoreForm
         $oForm->addElement(new \PFBC\Element\Checkbox('', 'latest', ['1' => '<span class="bold">' . t('Latest members') . '</span>'], self::$aLatestOrder));
         $oForm->addElement(new \PFBC\Element\Checkbox('', 'avatar', ['1' => '<span class="bold">' . t('Only with Avatar') . '</span>'], self::$aAvatarOnly));
         $oForm->addElement(new \PFBC\Element\Checkbox('', 'online', ['1' => '<span class="bold green2">' . t('Only Online') . '</span>'], self::$aOnlineOnly));
-        $oForm->addElement(new \PFBC\Element\Button(t('Search'), 'submit', ['icon' => 'search']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-search"></i> Search'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg', 'icon' => 'search']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'geo/autocompleteCity.js"></script>'));
         $oForm->render();
     }
@@ -89,7 +89,7 @@ class SearchUserCoreForm
         $oForm->addElement(new \PFBC\Element\Checkbox('', 'online', ['1' => '<span class="bold green2">' . t('Only Online') . '</span>']));
         $oForm->addElement(new \PFBC\Element\Select(t('Browse By:'), 'order', [SearchCoreModel::LATEST => t('Latest Members'), SearchCoreModel::LAST_ACTIVITY => t('Last Activity'), SearchCoreModel::VIEWS => t('Most Popular'), SearchCoreModel::RATING => t('Top Rated'), SearchCoreModel::USERNAME => t('Username'), SearchCoreModel::FIRST_NAME => t('First Name'), SearchCoreModel::LAST_NAME => t('Last Name'), SearchCoreModel::EMAIL => t('Email')]));
         $oForm->addElement(new \PFBC\Element\Select(t('Direction:'), 'sort', [SearchCoreModel::DESC => t('Descending'), SearchCoreModel::ASC => t('Ascending')]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Search'), 'submit', ['icon' => 'search']));
+        $oForm->addElement(new \PFBC\Element\Button(t('Search'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg', 'icon' => 'search']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'geo/autocompleteCity.js"></script>'));
         $oForm->render();
     }

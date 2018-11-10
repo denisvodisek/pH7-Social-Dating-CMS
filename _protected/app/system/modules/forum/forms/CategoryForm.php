@@ -31,7 +31,8 @@ class CategoryForm
         $oForm->addElement(new \PFBC\Element\Token('category'));
         $oForm->addElement(new \PFBC\Element\Textbox(t('Category Name:'), 'title', ['id' => 'str_category', 'onblur' => 'CValid(this.value,this.id,2,60)', 'pattern' => $sTitlePattern, 'required' => 1, 'validation' => new \PFBC\Validation\RegExp($sTitlePattern)]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error str_category"></span>'));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }

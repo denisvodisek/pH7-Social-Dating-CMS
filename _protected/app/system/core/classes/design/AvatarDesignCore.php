@@ -19,7 +19,7 @@ use PH7\Framework\Service\SearchImage\Url as ImageUrl;
 
 class AvatarDesignCore extends Design
 {
-    const DEF_AVATAR_SIZE = 32;
+    const DEF_AVATAR_SIZE = 33;
     const DEF_LIGHTBOX_AVATAR_SIZE = 400;
 
     /** @var UserCore */
@@ -80,11 +80,7 @@ class AvatarDesignCore extends Design
             list($sUsername, $sFirstName, $sSex) = $this->getGhostAvatarDetails();
         }
 
-        echo '<div class="picture_block">
-            <a href="', $this->getUserAvatar($sUsername, $sSex, $iSize), '" title="', ucfirst($sUsername), '" data-popup="image">
-                <img src="', $this->getUserAvatar($sUsername, $sSex, $iSize / 2), '" alt="', ucfirst($sUsername), '" title="', ucfirst($sFirstName), '" class="img_picture" />
-            </a>
-        </div>';
+        echo '<img class="img-raised rounded-circle img-fluid" src="', $this->getUserAvatar($sUsername, $sSex, $iSize / 2), '" alt="', ucfirst($sUsername), '" title="', ucfirst($sFirstName), '"/>';
 
         /**
          * @internal Google Search Image works only on non-local URLs, so check if we aren't on dev environments.

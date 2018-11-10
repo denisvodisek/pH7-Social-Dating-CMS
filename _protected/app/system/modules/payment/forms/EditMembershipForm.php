@@ -48,7 +48,8 @@ class EditMembershipForm
         $oForm->addElement(new \PFBC\Element\Number(t('Price:'), 'price', ['description' => t('Currency: %0%. 0 = Free. To change the currency, please <a href="%1%">go to settings</a>.', Config::getInstance()->values['module.setting']['currency'], Uri::get('payment', 'admin', 'config')), 'value' => $oMembership->price, 'step' => '0.01', 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\Number(t('Expiration Days:'), 'expiration_days', ['description' => t('0 = Unlimited'), 'value' => $oMembership->expirationDays, 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\Radio(t('Status:'), 'enable', [1 => t('Enabled'), 0 => t('Disabled')], ['value' => $oMembership->enable, 'required' => 1]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Update')));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-check"></i> Update'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 }

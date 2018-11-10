@@ -1,11 +1,12 @@
-<div class="box-left col-md-3 col-lg-3 col-xl-2">
-    <div role="search" class="design-box">
+<div class="container">
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-3">
+    <div role="search" class="searchbox">
         <h2>{lang 'Quick Search'}</h2>
-        {{ SearchUserCoreForm::quick(PH7_WIDTH_SEARCH_FORM) }}
+        {{ SearchUserCoreForm::quick() }}
     </div>
 </div>
 
-<div class="box-right col-md-9 col-lg-9 col-xl-9 col-xl-offset-1">
+<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
     {if empty($users)}
         <p class="center bold">{lang 'Whoops! No users found.'}</p>
     {else}
@@ -50,4 +51,5 @@
         {/each}
         {main_include 'page_nav.inc.tpl'}
     {/if}
+</div>
 </div>

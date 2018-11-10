@@ -36,7 +36,8 @@ class ForgotPasswordForm
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error email"></span>'));
         $oForm->addElement(new \PFBC\Element\CCaptcha(t('Captcha'), 'captcha', ['id' => 'ccaptcha', 'onkeyup' => 'CValid(this.value, this.id)', 'description' => t('Enter the below code:')]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error ccaptcha"></span>'));
-        $oForm->addElement(new \PFBC\Element\Button(t('Generate a new password!'), 'submit', ['icon' => 'key']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-lock"></i> Generate a new password'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }

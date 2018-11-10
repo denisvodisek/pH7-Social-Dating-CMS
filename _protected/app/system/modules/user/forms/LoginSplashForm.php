@@ -23,17 +23,25 @@ class LoginSplashForm
             Header::redirect();
         }
 
-        $oForm = new \PFBC\Form('form_login_user');
+        $oForm = new \PFBC\Form('splash_page_login');
         $oForm->configure(['view' => new \PFBC\View\Horizontal, 'action' => Uri::get('user', 'main', 'login')]);
         $oForm->addElement(new \PFBC\Element\Hidden('submit_login_user', 'form_login_user'));
         $oForm->addElement(new \PFBC\Element\Token('login'));
-        $oForm->addElement(new \PFBC\Element\Email('', 'mail', ['placeholder' => t('Your Email'), 'style' => 'width:190px', 'required' => 1], false));
-        $oForm->addElement(new \PFBC\Element\Password('', 'password', ['placeholder' => t('Your Password'), 'style' => 'width:190px', 'required' => 1]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Login'), 'submit',  ['class' => 'ui-button-white']));
-        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-4 bt_login_remember">'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-xs-12">'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-6 col-sm-6 col-xs-12">'));
+        $oForm->addElement(new \PFBC\Element\Email('', 'mail', ['placeholder' => t('Your Email'), 'style' => 'width:100%', 'required' => 1], false));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('</div>'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-6 col-sm-6 col-xs-12">'));
+        $oForm->addElement(new \PFBC\Element\Password('', 'password', ['placeholder' => t('Your Password'), 'style' => 'width:100%', 'required' => 1]));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('</div>'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-3 splash_page_button">'));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-key"></i> Login'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg']));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('</div>'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-3 bt_login_remember">'));
         $oForm->addElement(new \PFBC\Element\Checkbox('', 'remember', [1 => t('Stay signed in')]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('</div>'));
-        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-4 bt_login_forgot">' . LostPwdDesignCore::link('user', false) . '</div>'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<div class="col-md-6 col-sm-12 bt_login_forgot_pswd">' . LostPwdDesignCore::link('user', false) . '</div>'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('</div>'));
         $oForm->render();
     }
 }

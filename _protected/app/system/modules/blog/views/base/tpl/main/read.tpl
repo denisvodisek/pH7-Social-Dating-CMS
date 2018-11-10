@@ -1,3 +1,4 @@
+<div class="container">
 <div class="center">
     {if empty($error)}
         <article>
@@ -28,4 +29,5 @@
     {else}
         <p>{error}</p>
     {/if}
+</div>
 </div>

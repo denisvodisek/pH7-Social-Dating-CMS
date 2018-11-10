@@ -48,7 +48,8 @@ class MsgForm
             $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error ccaptcha"></span>'));
         }
 
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('Submit'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }

@@ -7,8 +7,8 @@
 .input_error {
     float: left;
     margin-left: 0px;
-    font-size: .95em;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Myriad Pro", Tahoma, Arial, Verdana, sans-serif;
+    font-size:11px;
+    font-family: "Nunito", "Lucida Sans Unicode", "Myriad Pro", Tahoma, Arial, Verdana, sans-serif;
 }
 
 .warn_msg {

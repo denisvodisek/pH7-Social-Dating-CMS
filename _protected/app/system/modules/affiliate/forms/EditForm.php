@@ -71,7 +71,7 @@ class EditForm
             $oForm = (new DynamicFieldCoreForm($oForm, $sColumn, $sValue))->generate();
         }
 
-        $oForm->addElement(new \PFBC\Element\Button(t('Save'), 'submit', ['icon' => 'check']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }

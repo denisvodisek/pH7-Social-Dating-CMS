@@ -1,3 +1,4 @@
+<div class="container">
 <script src="https://www.google.com/jsapi"></script>
 <script>
     google.load("visualization", "1", {packages:["corechart"]});
@@ -315,4 +316,5 @@
             <td>{total_game_comments}</td>
         </tr>
     </table>
+</div>
 </div>

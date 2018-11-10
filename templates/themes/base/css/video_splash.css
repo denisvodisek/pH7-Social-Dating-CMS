@@ -10,31 +10,20 @@ body {
 }
 
 .bt_login_forgot a, #form_login_user label, #promo_text, #promo_text a, #form_join_user em {
-    color: #FFF !important;
-}
-
-#promo_text h2, #promo_text h2 a {
-    color: #ffffff !important;
-}
-
-#promo_text {
-    max-width:80%;
-    background: #00000066;
-    padding: 20px;
-    margin-top: 2.8em;
+    color: #000000 !important;
 }
 
 footer a, footer p {
-    color: #EEE;
+    color: #000000;
 }
 
 /* Not "!important" for this one, otherwise all footer paragraph/link colors will be overwritten as well */
 .ft_dm a.dropdown_item {
-    color: #EEE !important;
+    color: #000000 !important;
 }
 
 #form_join_user label, #form_join_user label a, nav.bottom_nav {
-    color: #EEE !important;
+    color: #000000 !important;
 }
 
 .show_dropdown li a {
@@ -46,7 +35,7 @@ footer a, footer p {
 }
 
 #logo a {
-    color: #EEE;
+    color: #000000;
 }
 
 

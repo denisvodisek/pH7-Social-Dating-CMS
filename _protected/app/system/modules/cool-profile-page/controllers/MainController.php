@@ -69,7 +69,6 @@ class MainController extends ProfileBaseController
 
             $this->setMenuBar($aData['first_name'], $oUser);
             $this->setMap($aData['city'], $aData['country'], $oUser);
-
             $this->view->id = $this->iProfileId;
             $this->view->username = $oUser->username;
             $this->view->first_name = $aData['first_name'];

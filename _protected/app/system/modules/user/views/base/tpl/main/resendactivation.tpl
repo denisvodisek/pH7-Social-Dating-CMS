@@ -1,3 +1,4 @@
+<div class="container">
 <div class="left col-md-8 col-md-offset-2">
     <p>
         {lang}Simply enter your registered email address in the field below, and click the "Send Activation" button.{/lang}<br />
@@ -11,4 +12,5 @@
 
 <div class="right col-md-4 ad_336_280">
     {designModel.ad(336, 280)}
+</div>
 </div>

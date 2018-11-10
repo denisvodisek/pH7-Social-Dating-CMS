@@ -1,3 +1,4 @@
+<div class="container">
 <div class="left col-md-6">
     {include 'progressbar.inc.tpl'}
     {{ JoinForm::step1() }}
@@ -16,4 +17,5 @@
             {{ $userDesignModel->profilesBlock() }}
         </div>
     {/if}
+</div>
 </div>

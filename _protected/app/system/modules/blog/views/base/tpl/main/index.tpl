@@ -1,3 +1,4 @@
+<div class="container">
 <div class="box-left col-md-3 col-lg-3 col-xl-2">
     <div class="design-box">
         <h2>{lang 'Search Blog Posts'}</h2>
@@ -80,4 +81,5 @@
             </a>
         </p>
     </div>
+</div>
 </div>

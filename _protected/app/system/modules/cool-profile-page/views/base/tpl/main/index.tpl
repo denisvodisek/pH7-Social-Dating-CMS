@@ -1,22 +1,62 @@
-{if !empty($img_background)}
-    {* Set custom profile background (if set by user) *}
-    {manual_include 'profile_background.inc.tpl'}
+{{ $total_pics = count(glob(PH7_PATH_TPL . PH7_TPL_NAME . '/img/slideshow/*.jpg')) }}
+{{ $i = mt_rand(1,$total_pics) }}
+{{ $url = '' }}
+
+{if $img_background == ''}
+    {{ $url = $url_tpl . 'img/slideshow/'. $i .'.jpg' }}
 {/if}
+{if $img_background != ''}
+    {{ $url = $url_data . 'system/modules/user/background/img/' . $username . '/' . $img_background }}
+{/if}
+<div class="call_to_action header-filter" data-parallax="true" style="background-image: url('{url}');"></div>
+<div class="profile-page main main-raised">
+    <div class="profile-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile">
+                        <div class="avatar">
+                            {{ UserDesignCoreModel::userStatus($id) }}
+                            {{ (new AvatarDesignCore)->lightBox($username, $first_name, $sex, 400) }}
+                        </div>
 
-<div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3">
-        {{ UserDesignCoreModel::userStatus($id) }}
-        {{ (new AvatarDesignCore)->lightBox($username, $first_name, $sex, 400) }}
-        <h3>{first_name} {middle_name} {last_name}
-            {if empty($last_name) OR empty($middle_name)}
-                {* show username if middle or last name isn't set *}
-                <span class="italic">({username})</span>
-            {/if}
-            {{ $design->report($id, $username, $first_name, $sex) }}
-        </h3>
+                        <div class="name">
+                            <h2 class="title">{first_name} {middle_name} {last_name}</h2>
+                            <h5>@{username}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-xs-12 description text-center">
+                <p>{description}</p>
+            </div>
+                <div class="col-xs-12 description text-center">
+                <div class="center small">
+                    {if !empty($join_date)}
+                        {lang 'Join Date:'} <span class="italic">{join_date}</span>
+                    {/if}
+                    <br>
+                    {if !empty($last_activity)}
+                        {lang 'Last Activity:'} <span class="italic">{last_activity}</span>
+                    {/if}
+<br>
+                    {lang 'Views:'}
+                    <span class="italic">
+                {% Framework\Mvc\Model\Statistic::getView($id,DbTableName::MEMBER) %}
+            </span>
+                </div>
+                <p class="bold center">
+                    {{ $design->like($username, $first_name, $sex) }}
+                </p>
+                {manual_include 'profile_links.inc.tpl'}
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 informations">
 
-        {manual_include 'profile_links.inc.tpl'}
-
+                    <h2>{lang 'About'} {first_name}</h2>
+                    <br>
         <p>
             <i class="fa fa-{sex}"></i>
             <span class="bold">{lang 'I am a:'}</span>
@@ -144,16 +184,9 @@
         {{ $design->likeApi() }}
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-6">
-        {if !empty($description)}
-            <div class="profile-section">
-                <h2 class="center">{lang 'A Little About Me'}</h2>
-                <div class="quote italic center">{description}</div>
-            </div>
-            <br>
-        {/if}
+    <div class="col-xs-12 col-sm-8 col-md-6">
 
-        <h2 class="center">{lang 'Photos & Videos'}</h2>
+        <h2>{lang 'Photo Albums'}</h2>
         {if $is_picture_enabled}
             <div class="profile-section">
                 <div class="content" id="picture">
@@ -178,36 +211,24 @@
             <div class="clear"></div>
         {/if}
 
-        <div class="center small">
-            {if !empty($join_date)}
-                {lang 'Join Date:'} <span class="italic">{join_date}</span> •
-            {/if}
-
-            {if !empty($last_activity)}
-                {lang 'Last Activity:'} <span class="italic">{last_activity}</span> •
-            {/if}
-
-            {lang 'Views:'}
-            <span class="italic">
-                {% Framework\Mvc\Model\Statistic::getView($id,DbTableName::MEMBER) %}
-            </span>
-        </div>
-
-        <p class="center">
-            {{ $design->like($username, $first_name, $sex) }}
-        </p>
     </div>
 
-    <div class="col-xs-12 col-sm-2 col-md-3">
+    <div class="col-xs-12 col-sm-4 col-md-3">
         <div class="s_bMarg">
             <h2>{lang 'Location'}</h2>
+            <br>
             {map}
         </div>
 
         <div class="ad_160_600">
             {designModel.ad(160, 600)}
         </div>
-
+        <br>
+        <h2>{lang 'Comment this person'}</h2>
+        <br>
         {{ CommentDesignCore::link($id, 'profile') }}
+
+    </div>
+</div>
     </div>
 </div>

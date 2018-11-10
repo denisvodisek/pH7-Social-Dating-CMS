@@ -151,7 +151,7 @@ CSS;
                 if (!empty($elementWidths[$e])) {
                     $gridRemainingWidth -= $elementWidths[$e];
                     --$gridRemainingElements;
-                    echo '#', $id, ' #pfbc-element-', $e, ' { float: left; width: ', $elementWidths[$e], $widthSuffix, '; }';
+                    echo '#', $id, ' #pfbc-element-', $e, ' { float: right; width: ', $elementWidths[$e], $widthSuffix, '; }';
                     echo '#', $id, ' #pfbc-element-', $e, ' .pfbc-textbox, #', $id, ' #pfbc-element-', $e, ' .pfbc-textarea, #', $id, ' #pfbc-element-', $e, ' .pfbc-select { width: ', $elementWidths[$e], $widthSuffix, '; }';
                 }
             }
@@ -160,7 +160,7 @@ CSS;
                 $elementWidth = floor((($gridRemainingWidth - ($this->gridMargin * 2 * ($this->grid[$g] - 1))) / $gridRemainingElements));
                 for ($e = $gridSum; $e < ($gridSum + $this->grid[$g]); ++$e) {
                     if (empty($elementWidths[$e])) {
-                        echo '#', $id, ' #pfbc-element-', $e, ' { float: left; width: ', $elementWidth, $widthSuffix, '; }';
+                        echo '#', $id, ' #pfbc-element-', $e, ' { float: right; width: ', $elementWidth, $widthSuffix, '; }';
                         echo '#', $id, ' #pfbc-element-', $e, ' .pfbc-textbox, #', $id, ' #pfbc-element-', $e, ' .pfbc-textarea, #', $id, ' #pfbc-element-', $e, ' .pfbc-select { width: ', $elementWidth, $widthSuffix, '; }';
                     }
                 }

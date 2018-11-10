@@ -1,3 +1,4 @@
+<div class="container">
 <div class="center">
     {if !empty($births)}
         {each $birth in $births}
@@ -9,4 +10,5 @@
     {else}
         <p>{lang}No users who have a birthday today. Come back tomorrow 😉{/lang}</p>
     {/if}
+</div>
 </div>

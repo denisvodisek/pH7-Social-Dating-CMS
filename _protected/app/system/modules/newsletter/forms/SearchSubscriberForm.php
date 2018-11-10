@@ -19,7 +19,7 @@ class SearchSubscriberForm
         $oForm->addElement(new \PFBC\Element\Search(t('Search an Subscriber:'), 'looking', ['description' => t('Enter their ID, Name, Email or IP address.')]));
         $oForm->addElement(new \PFBC\Element\Select(t('Browse By:'), 'order', [SearchCoreModel::EMAIL => t('Email'), SearchCoreModel::NAME => t('Name'), SearchCoreModel::LATEST => t('Latest')]));
         $oForm->addElement(new \PFBC\Element\Select(t('Direction:'), 'sort', [SearchCoreModel::ASC => t('Ascending'), SearchCoreModel::DESC => t('Descending')]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Search'), 'submit', ['icon' => 'search']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-search"></i> Search'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg', 'icon' => 'search']));
         $oForm->render();
     }
 }

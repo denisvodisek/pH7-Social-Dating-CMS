@@ -59,7 +59,7 @@ class JoinForm
 
         $oForm->addElement(new \PFBC\Element\Checkbox(t('Terms of Service'), 'terms', [1 => '<em>' . t('I have read and agree to the %0%.', '<a href="' . Uri::get('page', 'main', 'terms') . '" rel="nofollow" target="_blank">' . t('Terms of Service') . '</a>') . '</em>'], ['id' => 'terms', 'onblur' => 'CValid(this.checked, this.id)', 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error terms-0"></span>'));
-        $oForm->addElement(new \PFBC\Element\Button(t('Join for free!'), 'submit',  ['class' => 'ui-button-white']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa fa-heart-o"></i> Join for free!'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg']));
 
         // JavaScript Files
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'signup.js"></script><script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));

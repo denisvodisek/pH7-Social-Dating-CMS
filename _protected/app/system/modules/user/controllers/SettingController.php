@@ -39,11 +39,14 @@ class SettingController extends Controller
         $this->iProfileId = $this->getProfileId();
         $this->sUsername = ($this->bAdminLogged && $this->httpRequest->getExists('username')) ? $this->httpRequest->get('username') : $this->session->get('member_username');
         $this->sFirstName = ($this->bAdminLogged && $this->httpRequest->getExists('first_name')) ? $this->httpRequest->get('first_name') : $this->session->get('member_first_name');
+        $this->sLastName = ($this->bAdminLogged && $this->httpRequest->getExists('list_name')) ? $this->httpRequest->get('list_name') : $this->session->get('member_    list_name');
+
         $this->sSex = ($this->bAdminLogged && $this->httpRequest->getExists('sex')) ? $this->httpRequest->get('sex') : $this->session->get('member_sex');
 
         /** For the avatar on the index and avatar page **/
         $this->view->username = $this->sUsername;
         $this->view->first_name = $this->sFirstName;
+        $this->view->last_name = $this->sLastName;
         $this->view->sex = $this->sSex;
         $this->view->avatarDesign = new AvatarDesignCore; // Avatar Design Class
 

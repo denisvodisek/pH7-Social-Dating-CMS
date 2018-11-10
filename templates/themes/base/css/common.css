@@ -14,19 +14,21 @@ html, body {
 
 
 body, td, pre {
-    font-family: 'Raleway', sans-serif;
-    font-size: 13px;
-    color: #666;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Nunito', serif;
+    font-weight: 800;
+    color: black!important;
 }
 
 
 body {
-    background: white url(../file/splash/couple.jpg) no-repeat;
-    background-size: cover;
+    background: white;
 }
 
 #links {
@@ -51,7 +53,7 @@ body {
 }
 
 #logo h1 {
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .navbar #logo {
@@ -210,9 +212,6 @@ label#percent {
 }
 
 .thumb_photo img, .s_photo img, .m_photo img {
-    margin: 2px;
-    padding: 4px;
-    border: 1px #DFDFDF solid;
     background: #fff;
     box-shadow: 3px 3px 3px #ccc;
 }
@@ -231,6 +230,7 @@ label#percent {
 }
 
 .thumb_photo {
+    text-align: left;
     margin: 10px;
 }
 
@@ -336,11 +336,6 @@ img, video, iframe {
 .ad_120_600 {}
 .ad_160_600 {}
 
-
-.progress-bar {
-    background-color: #e97688;
-}
-
 .ui-button-text-icon-primary {
     font-weight: bold;
     color: #666;
@@ -370,10 +365,7 @@ ui-button-text-only:hover, .ui-button-text:hover {
     color: white;
     border: 2px solid white;
 }
-.buttoncolor button {
-    color: #666!important;
-    border: 2px solid #666!important;
-}
+
 #form_join_user4 .pfbc-buttons{
     text-align: center!important;
 }

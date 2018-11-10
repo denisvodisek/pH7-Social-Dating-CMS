@@ -1,4 +1,5 @@
 <div class="row">
+        <div class="col-md-12 text-center">
     {if !$is_own_profile AND $is_im_enabled}
         <a class="vs_marg" rel="nofollow" href="{messenger_link}" title="{lang 'Chat'}"><i class="fa fa-comment-o chat"></i></a>
     {/if}
@@ -14,4 +15,5 @@
     {if $is_friend_enabled AND !$is_own_profile}
         <a class="vs_marg" ref="nofollow" href="{befriend_link}" title="{lang 'Add Friend'}"><i class="fa fa-user-plus friend"></i></a>
     {/if}
+</div>
 </div>

@@ -1,3 +1,4 @@
+<div class="container">
 <div class="center">
     {if !$delete_status}
         <p class="bold green1">
@@ -16,4 +17,5 @@
             </li>
         </ul>
     {/if}
+</div>
 </div>

@@ -38,6 +38,7 @@ class UserModel extends UserCoreModel
         $rStmt->bindValue(':username', $aData['username'], \PDO::PARAM_STR);
         $rStmt->bindValue(':password', $aData['password'], \PDO::PARAM_STR);
         $rStmt->bindValue(':first_name', $aData['first_name'], \PDO::PARAM_STR);
+        $rStmt->bindValue(':last_name', $aData['last_name'], \PDO::PARAM_STR);
         $rStmt->bindValue(':reference', $aData['reference'], \PDO::PARAM_STR);
         $rStmt->bindValue(':is_active', $aData['is_active'], \PDO::PARAM_INT);
         $rStmt->bindValue(':ip', $aData['ip'], \PDO::PARAM_STR);

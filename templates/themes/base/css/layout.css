@@ -240,9 +240,6 @@
 
 /* 745px or less */
 @media (max-width: 770px) {
-    .box-left {
-        display: none;
-    }
 
     .box-right {
         width: 100%;

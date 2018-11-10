@@ -1,3 +1,4 @@
+<div class="container">
 <div class="center">
     {if empty($error)}
         <div>{map}</div>
@@ -6,4 +7,5 @@
     {else}
         <p>{error}</p>
     {/if}
+</div>
 </div>

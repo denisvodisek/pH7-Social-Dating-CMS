@@ -79,7 +79,7 @@ class EditAdminBlogForm
             $oForm->addElement(new \PFBC\Element\Textbox(t('Author (meta tag):'), 'meta_author', ['value' => $oPost->metaAuthor, 'validation' => new \PFBC\Validation\Str(2, 50)]));
             $oForm->addElement(new \PFBC\Element\Textbox(t('Copyright (meta tag):'), 'meta_copyright', ['value' => $oPost->metaCopyright, 'validation' => new \PFBC\Validation\Str(2, 50)]));
             $oForm->addElement(new \PFBC\Element\Radio(t('Enable Comment:'), 'enable_comment', ['1' => t('Enable'), '0' => t('Disable')], ['value' => $oPost->enableComment, 'required' => 1]));
-            $oForm->addElement(new \PFBC\Element\Button);
+            $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
             $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_TPL_SYS_MOD . 'blog/' . PH7_TPL . PH7_TPL_MOD_NAME . PH7_SH . PH7_JS . 'common.js"></script>'));
             $oForm->render();
         } else {

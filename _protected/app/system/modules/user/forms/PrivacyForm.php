@@ -42,7 +42,7 @@ class PrivacyForm
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<h3><u>' . t('Presence:') . '</u></h3>'));
         $oForm->addElement(new \PFBC\Element\Select(t('Your status <div class="user_status right" id="status_div"></div>'), 'user_status', [UserModel::ONLINE_STATUS => t('Online'), UserModel::BUSY_STATUS => t('Busy'), UserModel::AWAY_STATUS => t('Away'), UserModel::OFFLINE_STATUS => 'Offline'], ['id' => 'status', 'onchange' => 'init_status()', 'value' => $oUserModel->getUserStatus($iProfileId), 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script>$(function(){ init_status() });</script>'));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->render();
     }
 }

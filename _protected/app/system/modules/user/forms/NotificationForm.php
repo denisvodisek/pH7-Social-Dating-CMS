@@ -35,7 +35,7 @@ class NotificationForm
         $oForm->addElement(new \PFBC\Element\Select(t('Newsletters'), 'enable_newsletters', ['1' => t('Enable'), '0' => t('Disable')], ['description' => t('By enabling this option, you would be likely to receive occasional news on our website and our services and offers, promotions and other benefits to our partners.'), 'value' => $oNotification->enableNewsletters, 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\Select(t('Messages'), 'new_msg', ['1' => t('Yes'), '0' => t('No')], ['value' => $oNotification->newMsg, 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\Select(t('Friend requests'), 'friend_request', ['1' => t('Yes'), '0' => t('No')], ['value' => $oNotification->friendRequest, 'required' => 1]));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->render();
     }
 }

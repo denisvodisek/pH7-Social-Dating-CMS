@@ -48,7 +48,8 @@ class PictureForm
         $oForm->addElement(new \PFBC\Element\File(t('Your photo(s):'), 'photos[]', ['description' => '<span class="bold">' . t('Tip:') . '</span> ' . t('You can select multiple photos at once by clicking multiple files while holding down the "CTRL" key.'), 'multiple' => 'multiple', 'accept' => 'image/*', 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<p class="pfbc-label"><em><span class="bold">' . t('Note:') . '</span> ' . t('Please be patient while downloading pictures, this may take time (especially if you download a lot of photos at once).') . '</em></p>'));
         $oForm->addElement(new \PFBC\Element\Textarea(t('Description for your photo(s):'), 'description', ['validation' => new \PFBC\Validation\Str(2, 200)]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Upload'), 'submit', ['icon' => 'image']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-image"></i> Upload'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 

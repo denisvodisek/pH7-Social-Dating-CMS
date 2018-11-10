@@ -1,3 +1,4 @@
+<div class="container">
 <div class="col-md-8">
     <p>
         <a href="{path_img_background}" data-popup="image">
@@ -15,4 +16,5 @@
     {/if}
 
     {{ DesignForm::display() }}
+</div>
 </div>

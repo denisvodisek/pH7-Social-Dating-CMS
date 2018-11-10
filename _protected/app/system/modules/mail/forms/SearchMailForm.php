@@ -22,7 +22,7 @@ class SearchMailForm
             $oForm->addElement(new \PFBC\Element\Select(t('Where:'), 'where', [MailModel::INBOX => t('Inbox'), MailModel::OUTBOX => t('Outbox'), MailModel::TRASH => t('Trash')]));
         }
         $oForm->addElement(new \PFBC\Element\Select(t('Direction:'), 'sort', [SearchCoreModel::ASC => t('Ascending'), SearchCoreModel::DESC => t('Descending')]));
-        $oForm->addElement(new \PFBC\Element\Button(t('Search'), 'submit', ['icon' => 'search']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-search"></i> Search'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg', 'icon' => 'search']));
         $oForm->render();
     }
 

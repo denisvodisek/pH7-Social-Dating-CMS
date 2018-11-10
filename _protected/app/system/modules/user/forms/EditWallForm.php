@@ -35,7 +35,7 @@ class EditWallForm
         $oForm->addElement(new \PFBC\Element\Hidden('submit_edit_wall', 'form_edit_wall'));
         $oForm->addElement(new \PFBC\Element\Token('edit_wall'));
         $oForm->addElement(new \PFBC\Element\Textarea(t('Content:'), 'post', ['value' => $oWallData->post, 'validation' => new \PFBC\Validation\Str(1, 900)]));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->render();
     }
 }

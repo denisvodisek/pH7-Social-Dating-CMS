@@ -1,3 +1,4 @@
+<div class="container">
 {if empty($error)}
     {each $a in $album}
         {* Set Picture Album Statistics *}
@@ -34,3 +35,4 @@
 {else}
   <p>{error}</p>
 {/if}
+</div>

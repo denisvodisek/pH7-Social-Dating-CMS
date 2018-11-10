@@ -9,7 +9,9 @@
                         <img src="{url_data_sys_mod}picture/img/{% $album->username %}/{% $album->albumId %}/{% $album->thumb %}" alt="{% $album->name %}" title="{% $album->name %}" />
                     </a>
                 </p>
+                <div class="desc_album">
                 <p>{% nl2br(Framework\Security\Ban\Ban::filterWord($album->description)) %}</p>
+                </div>
                 <p class="italic">{lang 'Views:'} {% Framework\Mvc\Model\Statistic::getView($album->albumId,DbTableName::ALBUM_PICTURE) %}</p>
 
                 {if $is_user_auth AND $member_id == $album->profileId}

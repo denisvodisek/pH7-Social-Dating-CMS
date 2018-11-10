@@ -43,7 +43,7 @@ class BankForm
         $sHtmlPayPalIcon = '<a href="https://www.paypal.com" rel="noopener" target="_blank"><img src="' . PH7_URL_STATIC . PH7_IMG . 'icon/paypal-small.svg" alt="PayPal" title="PayPal"></a><br />';
         $oForm->addElement(new \PFBC\Element\Email($sHtmlPayPalIcon . t('Your Bank Account:'), 'bank_account', ['id' => 'email_paypal', 'onblur' => 'CValid(this.value,this.id)', 'description' => t('Your Bank Account (PayPal Email Address).'), 'value' => $oAff->bankAccount, 'validation' => new \PFBC\Validation\BankAccount, 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\HtmlExternal('<span class="input_error email_paypal"></span>'));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }

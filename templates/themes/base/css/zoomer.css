@@ -1,5 +1,6 @@
 ul.zoomer_pic {
     width: 360px;
+    list-style: none;
 }
 
 ul.zoomer_pic li {

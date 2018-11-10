@@ -29,7 +29,8 @@ class VerificationCodeForm
         $oForm->addElement(new \PFBC\Element\Hidden('submit_verification_code', 'form_verification_code'));
         $oForm->addElement(new \PFBC\Element\Token('verification_code'));
         $oForm->addElement(new \PFBC\Element\Textbox(t('Verification Code:'), 'verification_code', ['maxlength' => 6, 'autocomplete' => 'off', 'required' => 1]));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('Submit'), 'submit',  ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 }

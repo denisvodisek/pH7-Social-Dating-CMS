@@ -8,6 +8,26 @@
     </script>
 {/if}
 
+<div class="call_to_action header-filter" data-parallax="true" style="background-image: url('{url_data_sys_mod}user/background/img/{username}/{img_background}');"></div>
+<div class="profile-page main main-raised">
+    <div class="profile-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile">
+                        <div class="avatar">
+                            {{ $avatarDesign->lightBox($username, $first_name, $sex, 400) }}
+                        </div>
+                        <div class="name">
+                            <h2 class="title">{first_name} {last_name}</h2>
+                            <h5>@{username}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 description text-center">
+                <p>{description}</p>
+            </div>
 {if empty($error)}
     <ol id="toc">
         <li>

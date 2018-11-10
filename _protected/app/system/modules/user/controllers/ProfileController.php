@@ -37,6 +37,8 @@ class ProfileController extends ProfileBaseController
 
     public function index()
     {
+
+
         $oUserModel = new UserModel;
 
         $this->addCssFiles();

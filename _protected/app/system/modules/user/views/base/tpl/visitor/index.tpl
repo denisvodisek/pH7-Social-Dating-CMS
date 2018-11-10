@@ -1,3 +1,4 @@
+<div class="container">
 <div class="center" id="visitor_block">
     {if $user_views_setting == 'no'}
         <div class="center alert alert-warning">{lang 'To see the new members who view your profile, you must first change'} <a href="{{ $design->url('user','setting','privacy') }}">{lang 'your privacy settings'}</a>.</div>
@@ -20,4 +21,5 @@
     {else}
         <p>{error}</p>
     {/if}
+</div>
 </div>

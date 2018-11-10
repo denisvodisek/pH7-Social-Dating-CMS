@@ -1,3 +1,4 @@
+<div class="container">
 <div class="right col-md-4 animated fadeInRight">
     <h1 class="red3 italic underline">{headline}</h1>
     <div class="center">
@@ -45,4 +46,5 @@
     {if $is_users_block}
         <div class="carousel">{{ $userDesignModel->carouselProfiles() }}</div>
     {/if}
+</div>
 </div>

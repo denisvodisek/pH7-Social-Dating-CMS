@@ -1,11 +1,10 @@
+<div class="container">
 <div class="col-md-8 col-md-offset-2">
     <p>
         {lang 'Not registered yet?'}<br />
         <a href="{{ $design->url('user','signup','step1') }}"><strong>{lang 'Join Us Today!'}</strong></a>
     </p>
-    <div class="buttoncolor">
     {{ LoginForm::display() }}
-    </div>
     <p>
         {{ LostPwdDesignCore::link('user') }}
         {if Framework\Mvc\Model\DbConfig::getSetting('userActivationType') == 2}
@@ -16,4 +15,5 @@
 
 <div class="col-md-4 ad_336_280">
     {designModel.ad(336, 280)}
+</div>
 </div>

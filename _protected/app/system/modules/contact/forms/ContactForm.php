@@ -46,7 +46,8 @@ class ContactForm
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error str_message"></span>'));
         $oForm->addElement(new \PFBC\Element\CCaptcha(t('Captcha'), 'captcha', ['description' => t('Enter the below code:'), 'id' => 'ccaptcha', 'onkeyup' => 'CValid(this.value, this.id)']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error ccaptcha"></span>'));
-        $oForm->addElement(new \PFBC\Element\Button(t('Contact US'), 'submit', ['icon' => 'contact']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-info-circle"></i> Contact us'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
 

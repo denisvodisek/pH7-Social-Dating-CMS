@@ -69,7 +69,7 @@ class JoinForm
         $oForm->addElement(new \PFBC\Element\Checkbox(t('Terms of Service'), 'terms', [1 => '<em>' . t('I have read and agree to the %0%.', '<a href="' . Uri::get('page', 'main', 'affiliateterms') . '" rel="nofollow" target="_blank">' . t('Terms of Service') . '</a>') . '</em>'], ['id' => 'terms', 'onblur' => 'CValid(this.checked, this.id)', 'required' => 1]));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<span class="input_error terms-0"></span>'));
 
-        $oForm->addElement(new \PFBC\Element\Button(t('Become an Affiliate!'), 'submit', ['icon' => 'cart']));
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Become an Affiliate'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
         $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script><script src="' . PH7_URL_STATIC . PH7_JS . 'geo/autocompleteCity.js"></script>'));
         $oForm->render();
     }

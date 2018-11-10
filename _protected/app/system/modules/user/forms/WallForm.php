@@ -31,7 +31,8 @@ class WallForm
         $oForm->addElement(new \PFBC\Element\Hidden('submit_wall', 'form_wall'));
         $oForm->addElement(new \PFBC\Element\Token('wall'));
         $oForm->addElement(new \PFBC\Element\Textarea(t('Content:'), 'post', ['validation' => new \PFBC\Validation\Str(1, 900)]));
-        $oForm->addElement(new \PFBC\Element\Button);
+        $oForm->addElement(new \PFBC\Element\Button(t('<i class="fa fa-save"></i> Save'), 'submit', ['class' => 'btn btn-danger btn-raised btn-lg']));
+
         $oForm->render();
     }
 }
