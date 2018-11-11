@@ -922,6 +922,7 @@ DENIS
   position:absolute;
   top:40%;
   right:0;
+  text-align: right;
 }
 .zoomer_pic {
   list-style: none;
@@ -969,36 +970,54 @@ ul.zoomer_pic > li {
   }
 
   #splash_page_login .pfbc-element {
-    float:none!important;
-    margin: 5px 0px!important;
+    float: none !important;
+    margin: 5px 0px !important;
   }
+
   .splash_page_button {
     width: 50% !important;
-    float:left;
+    float: left;
   }
+
   .splash_page_button button {
-    float:left;
+    float: left;
   }
+
   .bt_login_remember {
-    float:right;
-    margin-top:0px!important;
-    width: 50%!important;
+    float: right;
+    margin-top: 0px !important;
+    width: 50% !important;
   }
+
   .bt_login_forgot_pswd {
     padding-top: 10px;
-    display:grid;
+    display: grid;
   }
+
   .form-control label {
-    color:black!important;
+    color: black !important;
   }
+
   .form-control, label, input::placeholder {
-    color:black!important;
+    color: black !important;
   }
+
   .searchbox {
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
+
   .btn-md {
-    font-size:11px;
+    font-size: 11px;
+  }
+
+  .buttonMiddle {
+    position: relative;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    margin: 0 auto;
+    float: inherit;
+    text-align: center !important;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -1013,6 +1032,14 @@ ul.zoomer_pic > li {
     margin-bottom:20px;
   }
 }
+  @media only screen and (min-width: 768px) {
+    .buttonMiddle {
+      position:absolute;
+      top:40%;
+      right:0;
+      text-align: right;
+    }
+  }
 @media only screen and (min-width: 920px) {
   .topheader h1.title {
     text-align: left;

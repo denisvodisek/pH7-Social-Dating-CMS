@@ -1,8 +1,8 @@
-{{ $total_pics = count(glob(PH7_PATH_TPL . PH7_TPL_NAME . '/img/slideshow/*.jpg')) }}
+{{ $total_pics = count(glob(PH7_PATH_TPL . PH7_TPL_NAME . '/img/background/*.jpg')) }}
 {{ $i = mt_rand(1,$total_pics) }}
 {{ $url = '' }}
 {if !$background}
-    {{ $url = $url_tpl . 'img/slideshow/'. $i .'.jpg' }}
+    {{ $url = $url_tpl . 'img/background/'. $i .'.jpg' }}
 {/if}
 {if $background}
     {{ $url = $background }}

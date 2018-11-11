@@ -156,8 +156,8 @@
         </div>
       {/if}
 
-
-          <nav class="float-left">
+<div class="col-sm-12">
+  <div class="col-sm-12 col-md-12 col-lg-6">
             <ul>
               <li>
                 <a href="https://www.creative-tim.com">
@@ -180,15 +180,19 @@
                 </a>
               </li>
             </ul>
-          </nav>
-          <div class="copyright float-right">
+          </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="copyright">
             &copy;
             <script>
                 document.write(new Date().getFullYear())
             </script>
             <a href="https://sharethemoments.net" target="_blank"><i class="fa fa-heart heartlogo"></i>ShareTheMoments</a>.
           </div>
+    </div>
         </div>
+      </div>
       </footer>
 
     <div class="clear"></div>
