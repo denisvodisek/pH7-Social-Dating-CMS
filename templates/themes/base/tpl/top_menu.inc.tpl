@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-expand-lg">
       <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="{{ $design->homePageUrl() }}"><i class="fa fa-heart"></i> {lang 'Share The Moments'}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
         <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,6 @@
       </div>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="{{ $design->homePageUrl() }}"><i class="fa fa-heart"></i> {lang 'Share The Moments'}</a></li>
 
             {* Guest Menu *}
       {if !$is_user_auth AND !$is_aff_auth AND !$is_admin_auth}

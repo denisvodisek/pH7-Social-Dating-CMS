@@ -4184,13 +4184,9 @@ tbody.collapse.show {
 }
 
 .navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
+  color:white;
+  font-size:15px;
+  text-transform: uppercase;
 }
 
 .navbar-brand:hover,
@@ -14047,15 +14043,6 @@ textarea {
 .navbar .navbar-wrapper {
   display: inline-flex;
   align-items: center;
-}
-
-.navbar .navbar-brand {
-  position: relative;
-  color: inherit;
-  height: 50px;
-  font-size: 1.125rem;
-  line-height: 30px;
-  padding: 0.625rem 0;
 }
 
 .navbar.bg-primary {
