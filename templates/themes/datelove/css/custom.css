@@ -1019,6 +1019,9 @@ ul.zoomer_pic > li {
     float: inherit;
     text-align: center !important;
   }
+  .coupletestimonial {
+    height:230px;
+  }
 }
 @media only screen and (min-width: 576px) {
   .splash_page_button {
@@ -1039,9 +1042,15 @@ ul.zoomer_pic > li {
       right:0;
       text-align: right;
     }
+    .coupletestimonial {
+      height: 120px;
+    }
   }
 @media only screen and (min-width: 920px) {
   .topheader h1.title {
     text-align: left;
+  }
+  .coupletestimonial {
+    height: 120px;
   }
 }

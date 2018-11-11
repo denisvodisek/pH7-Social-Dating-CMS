@@ -103,7 +103,7 @@
                         <div class="team-player">
                             <div class="card card-plain">
                                 <div class="col-md-6 ml-auto mr-auto">
-                                    <div class="img-raised rounded-circle img-fluid" style="background:url('{url_tpl}img/1.jpg'); background-size:cover;height: 120px">
+                                    <div class="img-raised rounded-circle img-fluid coupletestimonial" style="background:url('{url_tpl}img/1.jpg');background-position: center;  background-size:cover;">
                                     </div>
                                 </div>
                                 <h4 class="card-title">Nancy Chan
@@ -120,7 +120,7 @@
                         <div class="team-player">
                             <div class="card card-plain">
                                 <div class="col-md-6 ml-auto mr-auto">
-                                    <div class="img-raised rounded-circle img-fluid" style="background:url('{url_tpl}img/2.jpg'); background-size:cover;height: 120px">
+                                    <div class="img-raised rounded-circle img-fluid coupletestimonial" style="background:url('{url_tpl}img/2.jpg');background-position: center; background-size:cover;">
                                     </div>
                                 </div>
                                 <h4 class="card-title">Matthew Ma
@@ -137,7 +137,7 @@
                         <div class="team-player">
                             <div class="card card-plain">
                                 <div class="col-md-6 ml-auto mr-auto">
-                                    <div class="img-raised rounded-circle img-fluid" style="background:url('{url_tpl}img/3.jpg'); background-size:cover;height: 120px">
+                                    <div class="img-raised rounded-circle img-fluid coupletestimonial" style="background:url('{url_tpl}img/3.jpg');background-position: center;  background-size:cover;">
                                     </div>
                                 </div>
                                 <h4 class="card-title">Mark Tim Lawrence
