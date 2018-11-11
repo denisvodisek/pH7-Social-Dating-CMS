@@ -34,14 +34,25 @@ class MainController extends Controller
         /**
          * @internal We can include HTML tags in the title since the template will erase them before display.
          */
-        $sMenDesc = t('You Men!') . '<br />' . t('Vote for the most beautiful women, the sexiest and hottest!');
-        $sWomenDesc = t('You Women!') . '<br />' . t('Vote for the best men, the sexiest and hottest!');
+        $sMenDesc = t('You <span style="color: dodgerblue">Men!</span>') . '<br />' . t('Vote for the <span style="color:deeppink">most beautiful women</span>, the sexiest and hottest!');
+        $sWomenDesc = t('You <span style="color: deeppink">Women!</span>') . '<br />' . t('Vote for  <span style="color:dodgerblue">the best men</span>, the sexiest and hottest!');
 
         $this->view->page_title = t('Hot On Not - Free Online Dating Site');
         $this->view->meta_description = $sMenDesc . ' ' . $sWomenDesc;
         $this->view->meta_keywords = t('hot, hot or not, hotornot, sexy, rate, rating, voting, women, free, dating, speed dating, flirt');
-        $this->view->desc_for_man = $sMenDesc;
-        $this->view->desc_for_woman = $sWomenDesc;
+
+        $this->view->sex = $this->session->get('member_sex');
+
+        if($this->view->sex == "Female") {
+            $this->view->desc_for_woman = $sWomenDesc;
+            $this->view->desc_for_man = "";
+        }
+        else {
+            $this->view->desc_for_man = $sMenDesc;
+            $this->view->desc_for_woman = "";
+        }
+
+
 
         /*** Display ***/
         // If the user is logged in, we do not display its own avatar since the user cannot vote for himself.

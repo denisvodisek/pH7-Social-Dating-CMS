@@ -1,11 +1,16 @@
+<div class="container">
+
+
 <div class="center">
     <h2 class="pink1">{desc_for_woman}</h2>
     <h2 class="pink2">{desc_for_man}</h2>
-
+    <br>
     <div class="s_bMarg"></div>
 
     {if empty($error)}
         {{ $avatarDesign->get($data->username, $data->firstName, $data->sex, 400) }}
+        <br>
+        <br>
         <div class="hon_click">
             {{ RatingDesignCore::voting($data->profileId,DbTableName::MEMBER,'center') }}
         </div>
@@ -24,4 +29,5 @@
     {else}
         <p class="bold">{error}</p>
     {/if}
+</div>
 </div>
